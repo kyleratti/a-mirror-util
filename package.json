@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/kyleratti/a-mirror-util#readme",
   "dependencies": {
-    "dotenv": "^6.0.0"
+    "dotenv": "^6.0.0",
+    "snoowrap": "^1.15.2"
   },
   "devDependencies": {
     "@types/node": "^10.5.2",
+    "@types/snoowrap": "^1.16.0",
     "ts-node": "^7.0.0",
     "typescript": "^2.9.2"
   }
