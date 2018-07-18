@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Utility library for all a-mirror-related projects",
   "main": "lib/index.js",
+  "types": "dts/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
