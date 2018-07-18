@@ -2,7 +2,11 @@ import snoowrap from 'snoowrap';
 
 import configurator from './configurator';
 
-export default function wrap() {
+/**
+ * Generates a snoowrap object
+ * @returns A snoowrap object
+ */
+export default function wrap(): snoowrap {
     let wrap = new snoowrap({
         userAgent: configurator.reddit.userAgent,
         clientId: configurator.reddit.clientID,
