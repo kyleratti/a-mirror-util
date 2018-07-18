@@ -1,3 +1,2 @@
 import snoowrap from 'snoowrap';
-declare let wrap: snoowrap;
-export default wrap;
+export declare var wrap: snoowrap.ConfigOptions;
