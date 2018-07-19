@@ -8,5 +8,4 @@ export var wrap = (new snoowrap({
     clientSecret: configurator.reddit.clientSecret,
     username: configurator.reddit.username,
     password: configurator.reddit.password,
-})
-    .config({continueAfterRatelimitError: false}));
+}).config({continueAfterRatelimitError: false}));
