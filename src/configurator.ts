@@ -45,6 +45,9 @@ export default {
         /** The file storage mode */
         storeMode: String(process.env.FILE_STORE_MODE),
 
+        /** The processing directory for temporary files */
+        processingDir: String(process.env.PROCESSING_DIR),
+
         /** Local file storage mode configuration */
         local: {
             /** The local directory to store files in */

@@ -31,6 +31,8 @@ declare const _default: {
     file: {
         /** The file storage mode */
         storeMode: string;
+        /** The processing directory for temporary files */
+        processingDir: string;
         /** Local file storage mode configuration */
         local: {
             /** The local directory to store files in */
