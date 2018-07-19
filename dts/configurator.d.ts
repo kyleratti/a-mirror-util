@@ -51,10 +51,6 @@ declare const _default: {
         userAgent: string;
         /** An array of subreddits to scan and mirror content in */
         scanSubsList: string[];
-        /** Whether or not to scan comments for the mirror keyword */
-        scanComments: boolean;
-        /** The mirror keyword to scan for */
-        scanKeyword: string;
     };
 };
 export default _default;

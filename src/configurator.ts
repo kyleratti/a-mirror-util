@@ -66,10 +66,6 @@ export default {
         userAgent: String(process.env.REDDIT_USER_AGENT),
         /** An array of subreddits to scan and mirror content in */
         scanSubsList: String(process.env.REDDIT_SCAN_SUBS).split(','),
-        /** Whether or not to scan comments for the mirror keyword */
-        scanComments: Boolean(process.env.REDDIT_SCAN_COMMENTS),
-        /** The mirror keyword to scan for */
-        scanKeyword: String(process.env.REDDIT_SCAN_KEYWORD),
     }
 }
 
