@@ -1,2 +1,6 @@
 import snoowrap from 'snoowrap';
-export declare var wrap: snoowrap.ConfigOptions;
+declare const _default: {
+    /** The snoowrap instance */
+    wrap: snoowrap.ConfigOptions;
+};
+export default _default;

@@ -1,2 +1,2 @@
 export { default as configurator } from './configurator';
-export * from './snooman';
+export { default as snooman } from './snooman';
