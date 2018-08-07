@@ -7,9 +7,9 @@ let wrap: snoowrap = new snoowrap({
     clientId: configurator.reddit.clientID,
     clientSecret: configurator.reddit.clientSecret,
     username: configurator.reddit.username,
-    password: configurator.reddit.password,
+    password: configurator.reddit.password
 });
-wrap.config({continueAfterRatelimitError: false});
+wrap.config({continueAfterRatelimitError: false, debug: true});
 
 export default {
     /** The snoowrap instance */
