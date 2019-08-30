@@ -39,7 +39,7 @@ declare const _default: {
             storageDir: string;
         };
     };
-    /** reddit configuration */
+    /** Reddit configuration */
     reddit: {
         /** The client ID of the application */
         clientID: string;
@@ -53,6 +53,20 @@ declare const _default: {
         userAgent: string;
         /** An array of subreddits to scan and mirror content in */
         scanSubsList: string[];
+    };
+    /** Storage configuration */
+    storage: {
+        /** S3-compatible storage configuration */
+        s3: {
+            /** The endpoint URL to use */
+            endpoint: string;
+            /** The access key ID for the endpoint */
+            accessKeyId: string;
+            /** The secret access key for the endpoint */
+            secretAccessKey: string;
+            /** The name of the bucket to store files in */
+            bucket: string;
+        };
     };
 };
 export default _default;
