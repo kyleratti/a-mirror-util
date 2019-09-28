@@ -83,5 +83,14 @@ export default {
       /** The name of the bucket to store files in */
       bucket: String(process.env.STORAGE_S3_BUCKET)
     }
+  },
+
+  /** Tuckbot configuration */
+  tuckbot: {
+    /** Configuration specific to the frontend project */
+    frontend: {
+      /** The full URL of the frontend CDN, including protocol and trailing slash (i.e. https://cdn.tuckbot.tv/) */
+      cdnUrl: String(process.env.TUCKBOT_FRONTEND_CDNURL)
+    }
   }
 };
