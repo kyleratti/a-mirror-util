@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/kyleratti/tuckbot-util#readme",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "snoowrap": "^1.15.2"
+    "dotenv": "^6.2.0",
+    "snoowrap": "^1.19.0"
   },
   "devDependencies": {
-    "@types/node": "^10.5.2",
-    "@types/snoowrap": "^1.16.0",
-    "ts-node": "^7.0.0",
-    "typescript": "^2.9.2"
+    "@types/node": "^10.14.19",
+    "@types/snoowrap": "^1.19.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.6.2"
   }
 }
