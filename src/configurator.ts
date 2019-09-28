@@ -90,7 +90,9 @@ export default {
     /** Configuration specific to the frontend project */
     frontend: {
       /** The full URL of the frontend CDN, including protocol and trailing slash (i.e. https://cdn.tuckbot.tv/) */
-      cdnUrl: String(process.env.TUCKBOT_FRONTEND_CDNURL)
+      cdnUrl: String(process.env.TUCKBOT_FRONTEND_CDNURL),
+      /** The full URL of the frontend, including protocol and trailing slash (i.e. https://tuckbot.tv/) */
+      url: String(process.env.TUCKBOT_FRONTEND_URL)
     }
   }
 };

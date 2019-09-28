@@ -74,6 +74,8 @@ declare const _default: {
         frontend: {
             /** The full URL of the frontend CDN, including protocol and trailing slash (i.e. https://cdn.tuckbot.tv/) */
             cdnUrl: string;
+            /** The full URL of the frontend, including protocol and trailing slash (i.e. https://tuckbot.tv/) */
+            url: string;
         };
     };
 };
