@@ -70,6 +70,11 @@ declare const _default: {
     };
     /** Tuckbot configuration */
     tuckbot: {
+        /** Configuration specific to the API project */
+        api: {
+            /** The full URL of the API, including protocol and trailing slash (i.e. https://api.tuckbot.tv/) */
+            url: string;
+        };
         /** Configuration specific to the frontend project */
         frontend: {
             /** The full URL of the frontend CDN, including protocol and trailing slash (i.e. https://cdn.tuckbot.tv/) */
