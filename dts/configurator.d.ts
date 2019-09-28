@@ -68,5 +68,13 @@ declare const _default: {
             bucket: string;
         };
     };
+    /** Tuckbot configuration */
+    tuckbot: {
+        /** Configuration specific to the frontend project */
+        frontend: {
+            /** The full URL of the frontend CDN, including protocol and trailing slash (i.e. https://cdn.tuckbot.tv/) */
+            cdnUrl: string;
+        };
+    };
 };
 export default _default;
