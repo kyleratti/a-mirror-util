@@ -1,7 +1,7 @@
 {
-  "name": "a-mirror-util",
+  "name": "tuckbot-util",
   "version": "1.0.0",
-  "description": "Utility library for all a-mirror-related projects",
+  "description": "Utility library for all tuckbot-related projects",
   "main": "lib/index.js",
   "types": "dts/index.d.ts",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyleratti/a-mirror-util.git"
+    "url": "git+https://github.com/kyleratti/tuckbot-util.git"
   },
   "author": "a.banana",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/kyleratti/a-mirror-util/issues"
+    "url": "https://github.com/kyleratti/tuckbot-util/issues"
   },
-  "homepage": "https://github.com/kyleratti/a-mirror-util#readme",
+  "homepage": "https://github.com/kyleratti/tuckbot-util#readme",
   "dependencies": {
     "dotenv": "^6.0.0",
     "snoowrap": "^1.15.2"
