@@ -4,6 +4,15 @@ let result = dotenv.load();
 if (result.error) throw result.error;
 
 export default {
+  /** a-centralized-mirror configuration */
+  acm: {
+    /** The endpoint URL of a-centralized-mirror */
+    endpoint: String(process.env.ACM_ENDPOINT),
+    /** The API token */
+    apiToken: String(process.env.ACM_API_TOKEN),
+    /** The bot token */
+    botToken: String(process.env.ACM_BOT_TOKEN)
+  },
   /** App configuration */
   app: {
     /** The full URL to the web endpoint */

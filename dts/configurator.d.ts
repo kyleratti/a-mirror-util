@@ -1,4 +1,13 @@
 declare const _default: {
+    /** a-centralized-mirror configuration */
+    acm: {
+        /** The endpoint URL of a-centralized-mirror */
+        endpoint: string;
+        /** The API token */
+        apiToken: string;
+        /** The bot token */
+        botToken: string;
+    };
     /** App configuration */
     app: {
         /** The full URL to the web endpoint */
