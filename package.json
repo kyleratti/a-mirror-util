@@ -1,6 +1,6 @@
 {
   "name": "tuckbot-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility library for all tuckbot-related projects",
   "main": "lib/index.js",
   "types": "dts/index.d.ts",
