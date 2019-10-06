@@ -23,6 +23,7 @@
     "snoowrap": "^1.19.0"
   },
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^10.14.19",
     "@types/snoowrap": "^1.19.0",
     "ts-node": "^7.0.1",
