@@ -26,7 +26,6 @@
     "@types/dotenv": "^6.1.1",
     "@types/node": "^10.17.2",
     "@types/snoowrap": "^1.19.0",
-    "ts-node": "^7.0.1",
     "typescript": "^3.6.2"
   }
 }
