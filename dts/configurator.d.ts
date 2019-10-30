@@ -83,6 +83,8 @@ declare const _default: {
         api: {
             /** The full URL of the API, including protocol but WITHOUT trailing slash (i.e. https://api.tuckbot.tv) */
             url: string;
+            /** The token used to authenticate private API requests */
+            token: string;
         };
         /** Configuration specific to the frontend project */
         frontend: {
