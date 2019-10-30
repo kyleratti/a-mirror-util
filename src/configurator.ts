@@ -98,7 +98,9 @@ export default {
     /** Configuration specific to the API project */
     api: {
       /** The full URL of the API, including protocol but WITHOUT trailing slash (i.e. https://api.tuckbot.tv) */
-      url: String(process.env.TUCKBOT_API_URL)
+      url: String(process.env.TUCKBOT_API_URL),
+      /** The token used to authenticate private API requests */
+      token: String(process.env.TUCKBOT_API_TOKEN)
     },
     /** Configuration specific to the frontend project */
     frontend: {
