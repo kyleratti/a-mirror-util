@@ -22,6 +22,8 @@ export interface VideoUpdateRequestOptions {
 
 export interface PruneVideoResponse extends ApiResponse {}
 
+export interface RemoveVideoResponse extends ApiResponse {}
+
 export interface FetchStaleVideosResponse extends ApiResponse {
   data: {
     /** An array of mirrored videos that are stale */
