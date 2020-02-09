@@ -47,6 +47,12 @@ export default {
     location: String(process.env.DATABASE_LOCATION)
   },
 
+  /** ffmpeg configuration */
+  ffmpeg: {
+    /** Full path to the ffmpeg binary location (i.e. /usr/local/bin/ffmpeg) */
+    location: String(process.env.FFMPEG_LOCATION)
+  },
+
   /** Storage configuration */
   file: {
     /** The file storage mode */
