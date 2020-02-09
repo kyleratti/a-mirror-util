@@ -1,4 +1,4 @@
-import { MirroredVideo } from "..";
+import { StaleVideo } from "..";
 export interface ApiResponse {
     status: {
         /** The HTTP status code of the response */
@@ -23,6 +23,6 @@ export interface RemoveVideoResponse extends ApiResponse {
 export interface FetchStaleVideosResponse extends ApiResponse {
     data: {
         /** An array of mirrored videos that are stale */
-        mirroredVideos: MirroredVideo[];
+        staleVideos: StaleVideo[];
     };
 }

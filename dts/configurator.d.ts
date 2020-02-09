@@ -36,6 +36,11 @@ declare const _default: {
     database: {
         location: string;
     };
+    /** ffmpeg configuration */
+    ffmpeg: {
+        /** Full path to the ffmpeg binary location (i.e. /usr/local/bin/ffmpeg) */
+        location: string;
+    };
     /** Storage configuration */
     file: {
         /** The file storage mode */
