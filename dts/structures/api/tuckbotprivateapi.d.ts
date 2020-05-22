@@ -18,6 +18,14 @@ export interface VideoUpdateRequestOptions {
 }
 export interface PruneVideoResponse extends ApiResponse {
 }
+export interface VideoExistsResponse extends ApiResponse {
+    data: {
+        /** The post ID of the original video */
+        redditPostId: string;
+        /** The URL to the mirror of the original video */
+        mirrorUrl: string;
+    };
+}
 export interface RemoveVideoResponse extends ApiResponse {
 }
 export interface FetchStaleVideosResponse extends ApiResponse {
