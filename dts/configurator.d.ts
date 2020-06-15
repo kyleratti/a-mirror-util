@@ -53,6 +53,30 @@ declare const _default: {
             storageDir: string;
         };
     };
+    /** Logging configuration */
+    logger: {
+        /** Elastic Search configuration */
+        elasticSearch: {
+            /**
+             * The name of the index to use when logging to elastic search
+             *
+             * @example tuckbot-util
+             */
+            index: string;
+            /**
+             * The full address to the elastic search instance
+             *
+             * @example http://172.20.1.45:9200
+             */
+            node: string;
+        };
+        /**
+         * The level of detail at which to log events
+         *
+         * @example "debug"
+         */
+        level: string;
+    };
     /** Reddit configuration */
     reddit: {
         /** The client ID of the application */
