@@ -85,7 +85,7 @@ export default {
        *
        * @example http://172.20.1.45:9200
        */
-      node: String(process.env.LOGGER_LASTICSEARCH_NODE),
+      node: String(process.env.LOGGER_ELASTICSEARCH_NODE),
     },
 
     /**
