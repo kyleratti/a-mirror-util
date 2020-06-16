@@ -2,70 +2,86 @@ import * as dotenv from "dotenv";
 
 dotenv.load();
 
+/**
+ * Retrieve a string value of the specified environment variable, or null if it isn't set
+ * @param varName The name of the environment variable to read from `process.env`
+ * @example stringOrNull("WEB_URL")
+ */
+const stringOrNull = (varName: string) =>
+  process.env[varName] ? String(process.env[varName]) : null;
+
+/**
+ * Retrieve a number value of the specified environment variable, or null if it isn't set
+ * @param varName The name of the environment variable to read from `process.env`
+ * @example numberOrNull("WEB_PORT")
+ */
+const numberOrNull = (varName: string) =>
+  process.env[varName] ? Number(process.env[varName]) : null;
+
 export default {
   /** a-centralized-mirror configuration */
   acm: {
     /** The endpoint URL of a-centralized-mirror */
-    endpoint: String(process.env.ACM_ENDPOINT),
+    endpoint: stringOrNull(process.env.ACM_ENDPOINT),
     /** The API token */
-    apiToken: String(process.env.ACM_API_TOKEN),
+    apiToken: stringOrNull(process.env.ACM_API_TOKEN),
     /** The bot token */
-    botToken: String(process.env.ACM_BOT_TOKEN),
+    botToken: stringOrNull(process.env.ACM_BOT_TOKEN),
   },
 
   /** App configuration */
   app: {
     /** The full URL to the web endpoint */
-    webUrl: String(process.env.WEB_URL),
+    webUrl: stringOrNull(process.env.WEB_URL),
     /** The port to listen on for web requests */
-    webPort: Number(process.env.WEB_PORT),
+    webPort: numberOrNull(process.env.WEB_PORT),
 
     /** The full URL to the cdn endpoint */
-    cdnUrl: String(process.env.CDN_URL),
+    cdnUrl: stringOrNull(process.env.CDN_URL),
     /** The port to listen on for CDN requests */
-    cdnPort: Number(process.env.CDN_PORT),
+    cdnPort: numberOrNull(process.env.CDN_PORT),
 
     /** The full URL to the api endpoint */
-    apiUrl: String(process.env.API_URL),
+    apiUrl: stringOrNull(process.env.API_URL),
     /** The port to listen on for api requests */
-    apiPort: Number(process.env.API_PORT),
+    apiPort: numberOrNull(process.env.API_PORT),
 
     /** The base domain */
-    baseDomain: String(process.env.BASE_DOMAIN),
+    baseDomain: stringOrNull(process.env.BASE_DOMAIN),
 
     /** The environment the app is running in */
-    environment: String(process.env.ENVIRONMENT),
+    environment: stringOrNull(process.env.ENVIRONMENT),
   },
 
   /** Authentication configuration */
   auth: {
     /** The token used to authenticate private API requests */
-    token: String(process.env.AUTH_TOKEN),
+    token: stringOrNull(process.env.AUTH_TOKEN),
   },
 
   /** Database configuration */
   database: {
-    location: String(process.env.DATABASE_LOCATION),
+    location: stringOrNull(process.env.DATABASE_LOCATION),
   },
 
   /** ffmpeg configuration */
   ffmpeg: {
     /** Full path to the ffmpeg binary location (i.e. /usr/local/bin/ffmpeg) */
-    location: String(process.env.FFMPEG_LOCATION),
+    location: stringOrNull(process.env.FFMPEG_LOCATION),
   },
 
   /** Storage configuration */
   file: {
     /** The file storage mode */
-    storeMode: String(process.env.FILE_STORE_MODE),
+    storeMode: stringOrNull(process.env.FILE_STORE_MODE),
 
     /** The processing directory for temporary files */
-    processingDir: String(process.env.PROCESSING_DIR),
+    processingDir: stringOrNull(process.env.PROCESSING_DIR),
 
     /** Local file storage mode configuration */
     local: {
       /** The local directory to store files in */
-      storageDir: String(process.env.LOCAL_STORAGE_DIR),
+      storageDir: stringOrNull(process.env.LOCAL_STORAGE_DIR),
     },
   },
 
@@ -78,14 +94,14 @@ export default {
        *
        * @example tuckbot-util
        */
-      index: String(process.env.LOGGER_ELASTICSEARCH_INDEX),
+      index: stringOrNull(process.env.LOGGER_ELASTICSEARCH_INDEX),
 
       /**
        * The full address to the elastic search instance
        *
        * @example http://172.20.1.45:9200
        */
-      node: String(process.env.LOGGER_ELASTICSEARCH_NODE),
+      node: stringOrNull(process.env.LOGGER_ELASTICSEARCH_NODE),
     },
 
     /**
@@ -93,23 +109,23 @@ export default {
      *
      * @example "debug"
      */
-    level: String(process.env.LOGGER_LEVEL || "debug"),
+    level: stringOrNull(process.env.LOGGER_LEVEL || "debug"),
   },
 
   /** Reddit configuration */
   reddit: {
     /** The client ID of the application */
-    clientID: String(process.env.REDDIT_CLIENT_ID),
+    clientID: stringOrNull(process.env.REDDIT_CLIENT_ID),
     /** The client secret of the application */
-    clientSecret: String(process.env.REDDIT_CLIENT_SECRET),
+    clientSecret: stringOrNull(process.env.REDDIT_CLIENT_SECRET),
     /** The username of the reddit account (bot account) */
-    username: String(process.env.REDDIT_USERNAME),
+    username: stringOrNull(process.env.REDDIT_USERNAME),
     /** The password of the reddit account (bot account) */
-    password: String(process.env.REDDIT_PASSWORD),
+    password: stringOrNull(process.env.REDDIT_PASSWORD),
     /** The unique user agent to use with the reddit API */
-    userAgent: String(process.env.REDDIT_USER_AGENT),
+    userAgent: stringOrNull(process.env.REDDIT_USER_AGENT),
     /** An array of subreddits to scan and mirror content in */
-    scanSubsList: String(process.env.REDDIT_SCAN_SUBS).split(","),
+    scanSubsList: stringOrNull(process.env.REDDIT_SCAN_SUBS).split(","),
   },
 
   /** Storage configuration */
@@ -117,13 +133,13 @@ export default {
     /** S3-compatible storage configuration */
     s3: {
       /** The endpoint URL to use */
-      endpoint: String(process.env.STORAGE_S3_ENDPOINT),
+      endpoint: stringOrNull(process.env.STORAGE_S3_ENDPOINT),
       /** The access key ID for the endpoint */
-      accessKeyId: String(process.env.STORAGE_S3_ACCESS_KEY_ID),
+      accessKeyId: stringOrNull(process.env.STORAGE_S3_ACCESS_KEY_ID),
       /** The secret access key for the endpoint */
-      secretAccessKey: String(process.env.STORAGE_S3_SECRET_ACCESS_KEY),
+      secretAccessKey: stringOrNull(process.env.STORAGE_S3_SECRET_ACCESS_KEY),
       /** The name of the bucket to store files in */
-      bucket: String(process.env.STORAGE_S3_BUCKET),
+      bucket: stringOrNull(process.env.STORAGE_S3_BUCKET),
     },
   },
 
@@ -132,16 +148,16 @@ export default {
     /** Configuration specific to the API project */
     api: {
       /** The full URL of the API, including protocol but WITHOUT trailing slash (i.e. https://api.tuckbot.tv) */
-      url: String(process.env.TUCKBOT_API_URL),
+      url: stringOrNull(process.env.TUCKBOT_API_URL),
       /** The token used to authenticate private API requests */
-      token: String(process.env.TUCKBOT_API_TOKEN),
+      token: stringOrNull(process.env.TUCKBOT_API_TOKEN),
     },
     /** Configuration specific to the frontend project */
     frontend: {
       /** The full URL of the frontend CDN, including protocol but WITHOUT trailing slash (i.e. https://cdn.tuckbot.tv) */
-      cdnUrl: String(process.env.TUCKBOT_FRONTEND_CDNURL),
+      cdnUrl: stringOrNull(process.env.TUCKBOT_FRONTEND_CDNURL),
       /** The full URL of the frontend, including protocol but WITHOUT trailing slash (i.e. https://tuckbot.tv) */
-      url: String(process.env.TUCKBOT_FRONTEND_URL),
+      url: stringOrNull(process.env.TUCKBOT_FRONTEND_URL),
     },
   },
 };
