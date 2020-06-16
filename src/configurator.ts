@@ -1,6 +1,6 @@
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 
-dotenv.load();
+dotenv.config();
 
 /**
  * Retrieve a string value of the specified environment variable, or null if it isn't set
