@@ -125,7 +125,7 @@ export default {
     /** The unique user agent to use with the reddit API */
     userAgent: stringOrNull(process.env.REDDIT_USER_AGENT),
     /** An array of subreddits to scan and mirror content in */
-    scanSubsList: stringOrNull(process.env.REDDIT_SCAN_SUBS).split(","),
+    scanSubsList: stringOrNull(process.env.REDDIT_SCAN_SUBS)?.split(","),
   },
 
   /** Storage configuration */
