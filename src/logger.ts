@@ -24,3 +24,8 @@ export const logger = pino(
   { level: configurator.logger.level, ...ecsFormat },
   multistream(streams)
 );
+
+logger.info({
+  msg: `Started logger module`,
+  logLevel: logger.level,
+});
