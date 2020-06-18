@@ -21,7 +21,11 @@ if (index && node)
   );
 
 export const logger = pino(
-  { level: configurator.logger.level, ...ecsFormat },
+  {
+    level: configurator.logger.level,
+    redact: ["req.headers.x-*-token"],
+    ...ecsFormat,
+  },
   multistream(streams)
 );
 
