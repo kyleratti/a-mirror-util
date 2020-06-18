@@ -23,11 +23,13 @@ if (index && node)
 export const logger = pino(
   {
     level: configurator.logger.level,
-    redact: [
-      "req.headers.x-tuckbot-api-token",
-      "req.headers.x-acm-api-token",
-      "req.headers.x-acm-bot-token",
-    ],
+    redact: {
+      paths: [
+        'req.headers."x-tuckbot-api-token"',
+        'req.headers."x-acm-api-token"',
+        'req.headers."x-acm-bot-token"',
+      ],
+    },
     ...ecsFormat,
   },
   multistream(streams)
