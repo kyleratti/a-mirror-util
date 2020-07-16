@@ -21,7 +21,7 @@
   "homepage": "https://github.com/kyleratti/tuckbot-util#readme",
   "dependencies": {
     "@elastic/ecs-pino-format": "^0.1.0",
-    "dotenv": "^6.2.0",
+    "dotenv": "^8.2.0",
     "pino": "^6.3.2",
     "pino-elasticsearch": "^5.1.0",
     "pino-multi-stream": "^5.0.0",
@@ -29,7 +29,7 @@
     "snoowrap": "^1.20.1"
   },
   "devDependencies": {
-    "@types/dotenv": "^6.1.1",
+    "@types/dotenv": "^8.2.0",
     "@types/node": "^14.0.13",
     "@types/pino": "^6.3.0",
     "@types/pino-multi-stream": "^5.0.0",
