@@ -9,7 +9,8 @@ const { index, node } = configurator.logger.elasticSearch;
 let streams = [{ stream: process.stdout }];
 
 if (index && node)
-  streams.push(
+  streams = [
+    ...streams,
     pinoElastic({
       index: index,
       consistency: "one",
@@ -17,8 +18,8 @@ if (index && node)
       "es-version": 7,
       "flush-bytes": 10,
       sync: true,
-    })
-  );
+    }),
+  ];
 
 export const logger = pino(
   {
